@@ -121,7 +121,7 @@
         .logo {
             font-size: 26px;
             font-weight: 700;
-            color: #4f46e5;
+            color: var(--text-primary) !important;
             display: flex;
             align-items: center;
         }
@@ -666,6 +666,7 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
@@ -691,7 +692,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Atölyeniz Cebinizde: terzicepte</h1>
+                <h1>İşinizin Dijital Hali Cebinizde</h1>
                 <p>Müşteri kayıtlarından ölçülere, sipariş takibinden randevulara kadar tüm terzilik iş akışınızı
                     dijitalleştirin. Zamandan kazanın, verimliliğinizi artırın.</p>
                 <div class="hero-buttons">
@@ -909,13 +910,12 @@
         <h2>Atölyenizi Cebinize Taşıyın!</h2>
         <p>terzicepte mobil uygulamasını şimdi indirin ve iş akışınızı her yerden yönetin.</p>
         <div class="download-buttons" style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
-            <a href="APP_STORE_LINKI_BURAYA" target="_blank" style="display: inline-block;">
-
+            <a href="https://apps.apple.com/tr/app/terzicepte" target="_blank" style="display: inline-block;">
                 <img src="appstorebutton.png" alt="App Store'dan İndirin" style="height: 50px;">
             </a>
-            <a href="GOOGLE_PLAY_LINKI_BURAYA" target="_blank" style="display: inline-block;">
-                <img src="playstorebutton.png" alt="Google Play'den Alın" style="height: 50px;">
-            </a>
+            <div class="coming-soon" style="display: inline-block;">
+                <img src="playstorebutton.png" alt="Google Play'den Alın (Yakında)" style="height: 50px;">
+            </div>
         </div>
     </section>
 
@@ -1081,13 +1081,29 @@
         // --- SLIDER SCRIPT END ---
 
 
-        // Mobile menu toggle (Basic example, needs enhancement)
+        // Mobile menu toggle
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const navLinks = document.querySelector('.nav-links'); // Note: This is hidden in CSS, needs rework for mobile menu
+        const navLinks = document.querySelector('.nav-links');
         if (mobileMenuButton && navLinks) {
             mobileMenuButton.addEventListener('click', () => {
-                alert('Mobil menü açma/kapama fonksiyonu eklenecek.');
-                // Example: navLinks.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                mobileMenuButton.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Menü açıkken dışarı tıklandığında kapanması için
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuButton.contains(e.target) && !navLinks.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    mobileMenuButton.textContent = '☰';
+                }
+            });
+
+            // Menü linklerine tıklandığında menünün kapanması
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuButton.textContent = '☰';
+                });
             });
         }
     </script>

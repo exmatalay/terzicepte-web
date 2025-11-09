@@ -1,0 +1,208 @@
+:root {
+    --primary-color: #1A2235;
+    --secondary-color: #2A3447;
+    --accent-color: #3E7BFA;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A7B5;
+    --text-disabled: #6B7280;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.navbar {
+    background: rgba(42, 52, 71, 0.9) !important;
+}
+
+.navbar.scrolled {
+    background: rgba(42, 52, 71, 0.98) !important;
+}
+
+.feature-card, .pricing-card {
+    background: var(--secondary-color);
+    border-color: var(--accent-color);
+}
+
+.footer {
+    background: var(--primary-color);
+}
+
+.logo {
+    color: var(--text-primary) !important;
+}
+
+.logo:hover {
+    opacity: 0.9;
+}
+
+.nav-links a {
+    color: var(--text-disabled) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary) !important;
+}
+
+.nav-links a.cta-button {
+    background: var(--accent-color);
+    color: var(--text-primary) !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.nav-links a.cta-button:hover {
+    opacity: 0.9;
+    color: var(--text-primary) !important;
+}
+
+/* Aktif link için stil */
+.nav-links a.active {
+    color: var(--text-primary) !important;
+}
+
+.btn-primary {
+    background: var(--accent-color) !important;
+}
+
+.section-header h1, .section-header h2 {
+    color: var(--text-primary) !important;
+}
+
+.section-header p {
+    color: var(--text-secondary) !important;
+}
+
+.feature-card h3 {
+    color: var(--text-primary) !important;
+}
+
+.feature-card p {
+    color: var(--text-secondary) !important;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: var(--secondary-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 750px;
+}
+
+.pricing-card.popular {
+  background: linear-gradient(135deg, #0099ff 0%, #0066ff 100%);
+  border: none;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.pricing-card.popular .btn-primary {
+  background: white!important;
+  color: #0066ff;
+}
+
+.pricing-card.popular .price,
+.pricing-card.popular h3,
+.pricing-card.popular .billing-cycle,
+.pricing-card.popular .features-list li {
+  color: white;
+}
+
+.pricing-card.popular .features-list li::before {
+  color: white;
+}
+
+.hero h1 {
+    color: #33233d; /*var(--secondary-color);*/
+}
+
+.download-buttons .coming-soon {
+    position: relative;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.download-buttons .coming-soon::after {
+    content: "Yakında";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.download-buttons .coming-soon:hover {
+    transform: none !important;
+}
+
+/* Mobil Menü Stilleri */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--secondary-color);
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+  }
+
+  .nav-links a.cta-button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .pricing-card {
+    min-height: auto;
+  }
+  
+  .pricing-card.popular {
+    transform: none;
+  }
+}
