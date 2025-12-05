@@ -1,8 +1,9 @@
 const config = {
     appName: 'terzicepte',
-    appStoreUrl: 'https://apps.apple.com/tr/app/terzicepte',
-    contactEmail: 'murat.atalay@hotmail.com.tr',
-    copyrightYear: '2025',
+    appStoreUrl: 'https://apps.apple.com/tr/app/terzicepte/id6752545996',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.terzicepte.app',
+    contactEmail: 'destek@terzicepte.net',
+    copyrightYear: new Date().getFullYear(),
 
     // Uygulama durumları
     playStoreStatus: 'coming_soon',
@@ -11,7 +12,10 @@ const config = {
     socialLinks: {
         facebook: '#',
         twitter: '#',
-        instagram: '#'
+        instagram: '#',
+        youtue: '#',
+        linkedin: '#',
+        tiktok: '#'
     }
 };
 
