@@ -7,9 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="terzicepte-icon.png" type="image/png">
+    <link rel="icon" href="assets/img/20.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <script src="js/config.js"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="nav-container">
                 <a href="index.html" class="logo">
-                    <img src="src/img/terzicepte-icon.png" alt="terzicepte">
+                    <img src="assets/img/terzicepte-icon.png" alt="terzicepte">
                     <span>terzicepte</span>
                 </a>
                 <ul class="nav-links">
@@ -34,7 +34,16 @@
             <div class="section-header">
                 <h1>terzicepte Destek</h1>
                 <p>Her türlü soru, öneri ve sorun bildirimi için bize ulaşın.</p>
-                <p>E-posta: <a href="mailto:destek@terzicepte.net">destek@terzicepte.net</a></p>
+                <p>E-posta: <a href="#" id="support-email-link"></a></p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const emailLink = document.getElementById('support-email-link');
+                        if (emailLink && typeof config !== 'undefined' && config.contactEmail) {
+                            emailLink.href = `mailto:${config.contactEmail}`;
+                            emailLink.textContent = config.contactEmailSubject;
+                        }
+                    });
+                </script>
                 <p>Çalışma saatleri: Hafta içi 09:00-18:00 (GMT+3)</p>
                 <p>Yanıt süresi: 48 saat</p>
                 <p><a href="privacy.html#features">Gizlilik Politikası</a></p>

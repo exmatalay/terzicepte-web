@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="terzicepte-icon.png" type="image/png">
+    <link rel="icon" href="assets/img/20.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <script src="js/config.js"></script>
 </head>
 
@@ -20,14 +20,25 @@
         <div class="container">
             <div class="nav-container">
                 <a href="index.html" class="logo">
-                    <img src="src/img/terzicepte-icon.png" alt="terzicepte">
+                    <img src="assets/img/terzicepte-icon.png" alt="terzicepte">
                     <span>terzicepte</span>
                 </a>
                 <ul class="nav-links">
                     <li><a href="index.html#features">Özellikler</a></li>
                     <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
                     <li><a href="#pricing">Fiyatlar</a></li>
-                    <li><a href="mailto:destek@terzicepte.net">Destek</a></li>
+                    <li>
+                        <a href="#" id="support-email-link">Destek</a>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const emailLink = document.getElementById('support-email-link');
+                                if (emailLink && typeof config !== 'undefined' && config.contactEmail) {
+                                    emailLink.href = `mailto:${config.contactEmail}`;
+                                    emailLink.textContent = config.contactEmailSubject;
+                                }
+                            });
+                        </script>
+                    </li>
                     <li><a href="#download-app" class="cta-button">Hemen İndir</a></li>
                 </ul>
                 <button class="mobile-menu-button">☰</button>

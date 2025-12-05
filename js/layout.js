@@ -13,16 +13,16 @@ const Layout = {
 
                 <div class="hero-image-slider">
                     <div class="slides">
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.55.37.png" alt="terzicepte Login Ekranı"></div>
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.03.png" alt="terzicepte Müşteriler Ekranı"></div>
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.18.png" alt="terzicepte Abonelik Ekranı"></div>
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.40.png" alt="terzicepte Ayarlar Ekranı"></div>
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.49.png" alt="terzicepte Müşteri Detay Ekranı"></div>
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.56.png" alt="terzicepte Ölçü Detay Ekranı"></div>
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.57.01.png" alt="terzicepte Sipariş Detay Ekranı"></div>
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.57.26.png" alt="terzicepte Müşteri Silme Onayı"></div>
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 19.02.28.png" alt="terzicepte Kayıt Ol Ekranı"></div>
-                        <div class="slide"><img src="screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 19.02.37.png" alt="terzicepte Şifremi Unuttum Ekranı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.55.37.png" alt="terzicepte Login Ekranı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.03.png" alt="terzicepte Müşteriler Ekranı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.18.png" alt="terzicepte Abonelik Ekranı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.40.png" alt="terzicepte Ayarlar Ekranı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.49.png" alt="terzicepte Müşteri Detay Ekranı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.56.png" alt="terzicepte Ölçü Detay Ekranı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.57.01.png" alt="terzicepte Sipariş Detay Ekranı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.57.26.png" alt="terzicepte Müşteri Silme Onayı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 19.02.28.png" alt="terzicepte Kayıt Ol Ekranı"></div>
+                        <div class="slide"><img src="assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 19.02.37.png" alt="terzicepte Şifremi Unuttum Ekranı"></div>
                     </div>
                     <div class="slider-dots"></div>
                 </div>
@@ -164,10 +164,10 @@ const Layout = {
         <p>terzicepte mobil uygulamasını şimdi indirin ve iş akışınızı her yerden yönetin.</p>
         <div class="download-buttons" style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
             <a href="#" data-app-store-link target="_blank">
-                <img src="src/img/appstorebutton.png" alt="App Store'dan İndirin" style="height: 50px;">
+                <img src="assets/img/appstorebutton.png" alt="App Store'dan İndirin" style="height: 50px;">
             </a>
             <div class="coming-soon" style="display: inline-block;">
-                <img src="src/img/playstorebutton.png" alt="Google Play'den Alın (Yakında)" style="height: 50px;">
+                <img src="assets/img/playstorebutton.png" alt="Google Play'den Alın (Yakında)" style="height: 50px;">
             </div>
         </div>
     </section>
@@ -258,22 +258,22 @@ const Layout = {
         let currentSlide = 0;
         let slideInterval;
 
-        const screenshots = [
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.55.37.png",
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.03.png",
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.18.png",
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.40.png",
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.49.png",
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.56.png",
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.57.01.png",
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.57.26.png",
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 19.02.28.png",
-            "screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 19.02.37.png"
+        const screenshoots = [
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.55.37.png",
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.03.png",
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.18.png",
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.49.png",
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.56.png",
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.57.01.png",
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.57.26.png",
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 19.02.28.png",
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 18.56.40.png",
+            "assets/screenshots/Simulator Screenshot - iPhone 17 Pro - 2025-10-22 at 19.02.37.png"
         ];
 
         if (dotsContainer) {
             dotsContainer.innerHTML = ''; // Temizle
-            screenshots.forEach((_, index) => {
+            screenshoots.forEach((_, index) => {
                 const dot = document.createElement('div');
                 dot.classList.add('dot');
                 dot.addEventListener('click', () => {
@@ -306,7 +306,7 @@ const Layout = {
 
         function nextSlide() {
             let nextIndex = currentSlide + 1;
-            if (nextIndex >= screenshots.length) {
+            if (nextIndex >= screenshoots.length) {
                 nextIndex = 0;
             }
             goToSlide(nextIndex);
